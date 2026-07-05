@@ -134,7 +134,7 @@
     const nama = document.getElementById("nama").value;
     const umur = parseInt(document.getElementById("umur").value);
 
-    await fetch(`${BASE_URL}/friends`, {
+    await fetch(`${BASE_URL}/teman`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ nama, umur })
@@ -147,7 +147,7 @@
     const nama = document.getElementById("nama").value;
     const umur = parseInt(document.getElementById("umur").value);
 
-    await fetch(`${BASE_URL}/friends/${nama}`, {
+    await fetch(`${BASE_URL}/teman/${nama}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ umur })
@@ -159,7 +159,7 @@
   async function deleteTeman(nama) {
     if (!confirm("Yakin mau hapus?")) return;
 
-    await fetch(`${BASE_URL}/friends/${nama}`, {
+    await fetch(`${BASE_URL}/teman/${nama}`, {
       method: "DELETE"
     });
 
