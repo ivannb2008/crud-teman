@@ -104,7 +104,7 @@
   const BASE_URL = "https://leehxqp60f.execute-api.us-east-1.amazonaws.com/prod"; // GANTI INI
 
   async function getAll() {
-    const res = await fetch(`${BASE_URL}/friends`);
+    const res = await fetch(`${BASE_URL}/teman`);
     const data = await res.json();
 
     const tbody = document.getElementById("tableBody");
